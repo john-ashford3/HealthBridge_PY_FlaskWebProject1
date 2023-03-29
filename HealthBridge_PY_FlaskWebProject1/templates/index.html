@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>MedVaultConnect</title>
+  </head>
+  <body>
+    <h1>MedVaultConnect</h1>
+    <form action="/" method="POST" enctype="multipart/form-data">
+      <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div>
+        <label for="image">Upload medical image:</label>
+        <input type="file" id="image" name="image" accept="image/*" required>
+      </div>
+      <div>
+        <label for="share-with">Share with:</label>
+        <input type="text" id="share-with" name="share-with">
+      </div>
+      <div>
+        <input type="submit" value="Upload">
+      </div>
+    </form>
+    {% if result %}
+    <p>URL of the uploaded image: {{ result }}</p>
+    {% endif %}
+  </body>
+</html>
