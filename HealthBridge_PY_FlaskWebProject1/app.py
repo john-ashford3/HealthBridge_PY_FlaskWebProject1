@@ -17,7 +17,7 @@ connection_string = secret_client.get_secret(name="blob-connection-string").valu
 blob_service_client = BlobServiceClient.from_connection_string(connection_string)
 
 # Get the Azure Blob Storage container client
-container_name = "your-container-name"
+container_name = "healthbridgeimg"
 container_client = blob_service_client.get_container_client(container_name)
 
 @app.route('/', methods=['GET', 'POST'])
