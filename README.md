@@ -20,3 +20,5 @@ Here are the requirements
 7. Search functionality: The application should allow users to search for specific medical data using keywords and other search parameters.
 
 These are just a few potential features that could be included in the application.
+
+![image](https://user-images.githubusercontent.com/124085277/229165720-56037962-c959-49f1-835c-c4bc1d97f38e.png)
