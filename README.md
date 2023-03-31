@@ -9,7 +9,7 @@ Here are the requirements
 
 2. Secure data storage: The application should store medical images and records in a secure, HIPAA-compliant manner using Azure Blob Storage.
 
-3. Access control: The owner of the data should be able to grant access to other physicians or healthcare providers, with different access levels depending on their roles.
+3. Access control: 2 factor auth. The owner of the data should be able to grant access to other physicians or healthcare providers, with different access levels depending on their roles.
 
 4. Data categorization: The application should automatically categorize medical data based on type, date, and other factors to make it easier to find and share.
 
