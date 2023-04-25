@@ -1,45 +1,114 @@
-from flask import Flask, render_template, request
-import os
-import uuid
-from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient
+# Import necessary modules
+from flask import Flask, render_template, request, redirect, url_for, flash
+from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required
+from flask_otp import OTP #, OTPSecret
 from azure.identity import DefaultAzureCredential
 from azure.keyvault.secrets import SecretClient
-from azure.core.exceptions import ResourceExistsError
+from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient
+import uuid
 
+# Initialize the Flask application
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'your_secret_key_here'
+app.config['OTP_SECRETS'] = {}
+
+# Initialize the Flask-Login extension
+login_manager = LoginManager()
+login_manager.init_app(app)
+
+# Initialize the Flask-OTP extension
+otp = OTP(app)
+# secrets = OTPSecret(app)
 
 # Get the Azure Blob Storage connection string from the Azure Key Vault
 credential = DefaultAzureCredential()
-secret_client = SecretClient(vault_url="https://your-key-vault-name.vault.azure.net/", credential=credential)
-connection_string = secret_client.get_secret(name="blob-connection-string").value
+# secret_client = SecretClient(vault_url="https://your-key-vault-name.vault.azure.net/", credential=credential)
+# connection_string = secret_client.get_secret(name="blob-connection-string").value
+conn_string='DefaultEndpointsProtocol=https;AccountName=medvaultconnect;AccountKey=gkyz7TxUz6RPgqOTf0e6YovEGRjpukpSObey0D1uKRbvvAsusqVUIh9JJuEp8wTgIOPgUo7SxNuR+AStx3KbSA==;EndpointSuffix=core.windows.net'
 
 # Initialize the Azure Blob Storage client
-blob_service_client = BlobServiceClient.from_connection_string(connection_string)
+blob_service_client = BlobServiceClient.from_connection_string(conn_string)
+
 
 # Get the Azure Blob Storage container client
-container_name = "healthbridgeimg"
+container_name = "medvaultconnect"
 container_client = blob_service_client.get_container_client(container_name)
 
-@app.route('/', methods=['GET', 'POST'])
-def upload_file():
+# User model
+class User(UserMixin):
+    def __init__(self, id, email, phone):
+        self.id = id
+        self.email = email
+        self.phone = phone
+
+# User database
+users = {
+    'user1': User('user1', 'user1@example.com', '+15555555555')
+}
+
+# Login manager setup
+@login_manager.user_loader
+def load_user(user_id):
+    return users.get(user_id)
+
+# Routes
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
     if request.method == 'POST':
-        # Get the uploaded file
-        file = request.files['image']
-        # Generate a unique ID for the file
-        file_id = str(uuid.uuid4())
-        # Save the file to Azure Blob Storage
+        # Get the form data
+        email = request.form['email']
+        phone = request.form['phone']
+        password = request.form['password']
+        # Generate a unique ID for the user
+        user_id = str(uuid.uuid4())
+        # Save the user data to Azure Blob Storage
         try:
-            # Create a blob client and upload the file
-            blob_client = container_client.get_blob_client(f"{file_id}_{file.filename}")
-            blob_client.upload_blob(file, overwrite=True)
-            # Get the URL of the uploaded file
-            file_url = blob_client.url
-            # Return the URL of the uploaded file
-            return render_template('index.html', result=file_url)
-        except ResourceExistsError:
-            return render_template('index.html', error='File already exists.')
+            # Hash the password
+            password_hash = secrets.hash(password)
+            # Save the user data to Azure Blob Storage
+            user_data = f"{email}\n{password_hash}"
+            blob_client = container_client.get_blob_client(f"{user_id}.txt")
+            blob_client.upload_blob(user_data, overwrite=True)
+            # Create a new user
+            user = User(user_id, email, phone)
+            users[user_id] = user
+            # Redirect to the two-factor authentication page
+            login_user(user, remember=True)
+            return redirect(url_for('verify'))
+        except Exception as e:
+            flash(f'Error: Could not create user account. reason is {e}')
+            return redirect(url_for('signup'))
     else:
-        return render_template('index.html')
+        return render_template('signup.html')
+
+@app.route('/verify', methods=['GET', 'POST'])
+@login_required
+def verify():
+    if request.method == 'POST':
+        token = request.form['token']
+        if otp.match(users.get(current_user.id).phone, token):
+            return redirect(url_for('dashboard'))
+        else:
+            flash('Error: Invalid token')
+            return redirect(url_for('verify'))
+    else:
+        return render_template('verify.html')
+
+@app.route('/dashboard')
+@login_required
+def dashboard():
+    return render_template('dashboard.html')
+
+@app.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('index'))
 
 if __name__ == '__main__':
     app.run(debug=True)
+

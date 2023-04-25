@@ -38,3 +38,5 @@ Werkzeug
 zipp					
 zope.event				
 zope.interface			
+flask_login
+flask_otp
