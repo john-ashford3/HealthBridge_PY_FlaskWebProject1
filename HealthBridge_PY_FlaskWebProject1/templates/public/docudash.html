@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.cdnfonts.com/css/satoshi?styles=135009,135005,135007,135002,135000" rel="stylesheet">
+    <link rel="stylesheet" href="css/tailwind/tailwind.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/Mask-group.png">
+    <script src="js/main.js"></script>
+</head>
+<body class="antialiased bg-body text-body font-body">
+    <div class="">
+
+      <section class="pt-6 pb-10 bg-gray-50 overflow-hidden">
+        <div class="container mx-auto px-4">
+          <nav class="flex justify-between items-center">
+            <div class="hidden relative xl:flex items-center py-2 px-6 bg-white rounded-3xl text-sm font-heading font-medium">
+              <img class="h-10 w-10 mr-4" src="images/Mask-group.png" alt="">
+              <select class="relative z-10 pr-24 pl-2 bg-transparent outline-none appearance-none cursor-pointer leading-8" name="" id="" onchange="location = this.value;">
+                <option value="docudash.html">Documents</option>
+                <option value="accessdash.html">Access</option>
+                <option value="1">Dossier</option>
+                <option value="1">Other</option>
+              </select>
+              <svg class="absolute top-1/2 right-0 h-4 -mt-2 mr-8" width="9" height="14" viewbox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.47291 8.69323C7.70854 8.43559 8.08938 8.43559 8.32328 8.69323C8.55804 8.95087 8.55978 9.36714 8.32328 9.62478L4.92529 13.3068C4.69053 13.5644 4.31056 13.5644 4.07406 13.3068L0.676073 9.62478C0.441309 9.3681 0.441309 8.95087 0.676073 8.69323C0.911706 8.43559 1.29254 8.43559 1.52644 8.69323L4.50098 11.7128L7.47291 8.69323Z" fill="#8C949F"></path>
+                <path d="M1.52709 5.30677C1.29146 5.56441 0.910619 5.56441 0.676725 5.30677C0.441961 5.04913 0.440223 4.63286 0.676725 4.37522L4.07471 0.693232C4.30947 0.435589 4.68944 0.435589 4.92594 0.693232L8.32393 4.37522C8.55869 4.6319 8.55869 5.04913 8.32393 5.30677C8.08829 5.56441 7.70746 5.56441 7.47356 5.30677L4.49902 2.28716L1.52709 5.30677Z" fill="#8C949F"></path>
+              </svg>
+            </div>
+            <div class="hidden xl:flex items-center justify-between">
+              <a class="inline-block mr-20 text-darkBlueGray-300 hover:text-darkBlueGray-400" href="#">
+                <svg width="17" height="18" viewbox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.22603 16.1331L5.22266 11.6871" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M9.82614 12.5306C13.0093 12.5306 15.5898 9.94935 15.5898 6.76528C15.5898 3.5812 13.0093 1 9.82614 1C6.64297 1 4.0625 3.5812 4.0625 6.76528C4.0625 9.94935 6.64297 12.5306 9.82614 12.5306Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </a>
+              <a class="flex items-center text-darkBlueGray-400 hover:text-darkBlueGray-500" href="#">
+                <span class="inline-block mr-5 font-heading font-medium leading-tight">Sona</span>
+                <img class="mr-4" src="uinel-assets/elements/navigations/avatar-online.png" alt="">
+                <svg width="8" height="5" viewbox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.97291 0.193232C7.20854 -0.0644107 7.58938 -0.0644107 7.82328 0.193232C8.05804 0.450875 8.05978 0.867141 7.82328 1.12478L4.42529 4.80677C4.19053 5.06441 3.81056 5.06441 3.57406 4.80677L0.176073 1.12478C-0.0586909 0.868102 -0.0586909 0.450875 0.176073 0.193232C0.411706 -0.0644107 0.792544 -0.0644107 1.02644 0.193232L4.00098 3.21284L6.97291 0.193232Z" fill="#8C949F"></path>
+                </svg>
+              </a>
+              <div class="flex-shrink-0 w-px h-10 bg-gray-100 ml-8 mr-10"></div>
+              <a class="relative inline-block text-darkBlueGray-300 hover:text-darkBlueGray-400" href="#">
+                <div class="absolute bottom-0 right-0 flex items-center justify-center -mr-2 -mb-1 w-4 h-4 text-xs text-white bg-red-500 rounded-full">1</div>
+                <svg class="h-5" width="20" height="23" viewbox="0 0 20 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.5219 18.016H2.70312V8.5933C2.70313 6.719 3.48375 4.92147 4.87328 3.59614C6.2628 2.27081 8.1474 1.52625 10.1125 1.52625C12.0776 1.52625 13.9622 2.27081 15.3517 3.59614C16.7412 4.92147 17.5219 6.719 17.5219 8.5933V18.016Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M1 18.0121H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M8.87891 22H10.8789" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </a>
+            </div>
+            <button class="ml-auto navbar-burger self-center xl:hidden">
+              <svg width="25" height="16" viewbox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="25" height="2" fill="currentColor"></rect><rect y="14" width="25" height="2" fill="currentColor"></rect></svg>
+            </button>
+          </nav>
+        </div>
+      </section>
+
+      <section class="py-0 bg-blueGray-50">
+        <div class="container px-4 mx-auto">
+          <div class="flex flex-wrap -mx-4">
+            <div class="w-full lg:w-2/3 p-4">
+              <div class="p-7 pt-4 pb-12 2xl:h-full bg-white rounded-5xl">
+                <div class="flex flex-wrap px-9 mb-8">
+                  <div class="w-full md:w-1/2 mb-6 md:mb-0">
+                    <h2 class="mb-3 text-3xl font-heading font-medium">Your Documents</h2>
+                    <p class="text-darkBlueGray-400 font-heading font-normal">Lorem Ipsum</p>
+                  </div>
+                  <div class="w-full md:w-1/2 max-w-max md:ml-auto"><a class="block py-4 px-7 w-full leading-3 text-white font-semibold tracking-tighter font-heading text-center bg-blue-500 hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 rounded-xl" href="#">Share</a></div>
+                </div>
+                <div class="px-9 mb-4">
+                  <div class="border-b border-gray-100"><a class="inline-block py-4 pr-16 mr-9 text-blue-500 hover:text-blue-600 font-heading font-medium border-0 border-b-2 border-blue-500" href="#">Upload</a><a class="inline-block py-4 pr-16 mr-9 text-gray-300 hover:text-gray-400 font-heading font-medium" href="#">Read</a></div>
+                </div>
+                <div class="overflow-x-auto">
+                  <div class="inline-block min-w-full overflow-hidden">
+                    <table class="table-auto w-full mb-8">
+                      <thead>
+                        <tr>
+                          <th class="flex items-center pl-9 h-24 bg-white text-left">
+                            <input class="appearance-none w-6 h-6 mr-9 bg-white border-2 border-darkbluegray-50 rounded-md" type="checkbox">
+                            <span class="text-sm text-body text-opacity-40 font-heading font-semibold uppercase">User id</span>
+                          </th>
+                          <th class="p-5 h-24 text-left bg-white">
+                            <span class="text-sm text-body text-opacity-40 font-heading font-semibold uppercase">Provider</span>
+                          </th>
+                          <th class="p-5 h-24 bg-white text-left">
+                            <span class="text-sm text-body text-opacity-40 font-heading font-semibold uppercase">Status</span>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="p-0">
+                            <div class="flex items-center pl-9 p-5 h-20 bg-blueGray-50 min-w-max border-l border-t border-b border-gray-100 rounded-tl-5xl rounded-bl-5xl">
+                              <input class="appearance-none w-6 h-6 mr-9 bg-white border-2 border-darkbluegray-50 rounded-md" type="checkbox">
+                              <div class="flex items-center justify-start">
+                                <img class="mr-5" src="uinel-assets/images/dashboard-tables/av1.png" alt="">
+                                <div>
+                                  <div class="font-heading font-medium">Reta Havertz, RN</div>
+                                  <div class="text-sm text-darkBlueGray-400 font-heading">reta@nch.org</div>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="p-0">
+                            <div class="flex flex-col items-start justify-center p-5 h-20 text-center min-w-max bg-blueGray-50 border-t border-b border-gray-100">
+                              <span class="font-heading font-medium">NCH Healthcare</span>
+                              <span class="text-sm text-darkBlueGray-400 font-heading">Radiology</span>
+                            </div>
+                          </td>
+                          <td class="p-0">
+                            <div class="flex flex-col items-start justify-center p-5 h-20 text-center min-w-max bg-blueGray-50 border-t border-b border-gray-100">
+                              <span class="font-heading font-medium">Active</span>
+                              <span class="text-sm text-darkBlueGray-400 font-heading">15 Days Remaining</span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="p-0">
+                            <div class="flex items-center pl-9 p-5 h-20 bg-white min-w-max rounded-tl-5xl rounded-bl-5xl">
+                              <input class="appearance-none w-6 h-6 mr-9 bg-white border-2 border-darkbluegray-50 rounded-md" type="checkbox">
+                              <div class="flex items-center justify-start">
+                                <img class="mr-5" src="uinel-assets/images/dashboard-tables/av2.png" alt="">
+                                <div>
+                                  <div class="font-heading font-medium">Dr. Ainsley Stones</div>
+                                  <div class="text-sm text-darkBlueGray-400 font-heading">ainsley@Mayo.org</div>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="p-0">
+                            <div class="flex flex-col items-start justify-center p-5 h-20 text-center min-w-max bg-white">
+                              <span class="font-heading font-medium">Mayo Clinic</span>
+                              <span class="text-sm text-darkBlueGray-400 font-heading">Oncology</span>
+                            </div>
+                          </td>
+                          <td class="p-0">
+                            <div class="flex flex-col items-start justify-center p-5 h-20 text-center min-w-max bg-white">
+                              <span class="font-heading font-medium">Active</span>
+                              <span class="text-sm text-darkBlueGray-400 font-heading">4 Days Remaining</span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="p-0">
+                            <div class="flex items-center pl-9 p-5 h-20 bg-blueGray-50 min-w-max border-l border-t border-b border-gray-100 rounded-tl-5xl rounded-bl-5xl">
+                              <input class="appearance-none w-6 h-6 mr-9 bg-white border-2 border-darkbluegray-50 rounded-md" type="checkbox">
+                              <div class="flex items-center justify-start">
+                                <img class="mr-5" src="uinel-assets/images/dashboard-tables/av3.png" alt="">
+                                <div>
+                                  <div class="font-heading font-medium">Dr. Faustina H. Fawn</div>
+                                  <div class="text-sm text-darkBlueGray-400 font-heading">fhf@NYHC.org</div>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="p-0">
+                            <div class="flex flex-col items-start justify-center p-5 h-20 text-center min-w-max bg-blueGray-50 border-t border-b border-gray-100">
+                              <span class="font-heading font-medium">NYU Medical System</span>
+                              <span class="text-sm text-darkBlueGray-400 font-heading">Radiology</span>
+                            </div>
+                          </td>
+                          <td class="p-0">
+                            <div class="flex flex-col items-start justify-center p-5 h-20 text-center min-w-max bg-blueGray-50 border-t border-b border-gray-100">
+                              <span class="font-heading font-medium text-gray">Inactive</span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="p-0">
+                            <div class="flex items-center pl-9 p-5 h-20 bg-white min-w-max rounded-tl-5xl rounded-bl-5xl">
+                              <input class="appearance-none w-6 h-6 mr-9 bg-white border-2 border-darkbluegray-50 rounded-md" type="checkbox">
+                              <div class="flex items-center justify-start">
+                                <img class="mr-5" src="uinel-assets/images/dashboard-tables/av1.png" alt="">
+                                <div>
+                                  <div class="font-heading font-medium">Kara Saamers, PA</div>
+                                  <div class="text-sm text-darkBlueGray-400 font-heading">kar@MRI.Org</div>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="p-0">
+                            <div class="flex flex-col items-start justify-center p-5 h-20 text-center min-w-max bg-white">
+                              <span class="font-heading font-medium">Orthipedic Solutions</span>
+                              <span class="text-sm text-darkBlueGray-400 font-heading">Radiology</span>
+                            </div>
+                          </td>
+                          <td class="p-0">
+                             <div class="flex flex-col items-start justify-center p-5 h-20 text-center min-w-max bg-blueGray-50 border-t border-b border-gray-100">
+                              <span class="font-heading font-medium text-gray">Inactive</span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="p-0">
+                            <div class="flex items-center pl-9 p-5 h-20 bg-blueGray-50 min-w-max border-l border-t border-b border-gray-100 rounded-tl-5xl rounded-bl-5xl">
+                              <input class="appearance-none w-6 h-6 mr-9 bg-white border-2 border-darkbluegray-50 rounded-md" type="checkbox">
+                              <div class="flex items-center justify-start">
+                                <img class="mr-5" src="uinel-assets/images/dashboard-tables/av2.png" alt="">
+                                <div>
+                                  <div class="font-heading font-medium">Teresa Olivia Mader, Medtech</div>
+                                  <div class="text-sm text-darkBlueGray-400 font-heading">ainsley@catscan.org</div>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="p-0">
+                            <div class="flex flex-col items-start justify-center p-5 h-20 text-center min-w-max bg-blueGray-50 border-t border-b border-gray-100">
+                              <span class="font-heading font-medium">Complete Medical Team</span>
+                              <span class="text-sm text-darkBlueGray-400 font-heading">Radiology</span>
+                            </div>
+                          </td>
+                          <td class="p-0">
+                             <div class="flex flex-col items-start justify-center p-5 h-20 text-center min-w-max bg-blueGray-50 border-t border-b border-gray-100">
+                              <span class="font-heading font-medium text-gray">Inactive</span>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="mx-auto max-w-max"><a class="block py-4 px-7 w-full leading-3 text-white font-semibold tracking-tighter font-heading text-center bg-blue-500 hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 rounded-xl" href="#">Show more</a></div>
+              </div>
+            </div>
+  <!-------------------------Dashboard Right Column---------------------------------------------------------------------------------------------------------------------->
+            <div class="w-full lg:w-1/3 p-4">
+              <div class="p-10 xl:py-4 xl:px-6 2xl:h-full bg-white rounded-5xl">
+                <h3 class="mb-3 text-3xl font-heading font-medium">Recent Activity</h3>
+                <p class="mb-12 text-darkBlueGray-400">New files and access</p>
+
+                <!-- Activity 1 -->
+                <div class="flex flex-wrap pb-1 mb-6 border-b border-gray-100">
+                  <div class="flex flex-wrap items-center w-full 2xl:mb-6 2xl:mb-0">
+
+                    <img class="h-10 w-10 mr-4" src="images/dicomicon.png" alt="">
+                    <h3 class="font-heading font-medium">Reta uploaded DICOM file - (4/25/23)</h3>
+                  </div>
+                </div>
+                <!-- Activity 2-->
+                <div class="flex flex-wrap pb-1 mb-6 border-b border-gray-100">
+                  <div class="flex flex-wrap items-center w-full 2xl:mb-6 2xl:mb-0">
+
+                    <img class="h-10 w-10 mr-4" src="images/Mask-group.png" alt="">
+                    <h3 class="font-heading font-medium">You gave uploaded access to Reta - (4/20/22)</h3>
+                  </div>
+                </div>
+                <!-- Activity 3-->
+                <div class="flex flex-wrap pb-1 mb-6 border-b border-gray-100">
+                  <div class="flex flex-wrap items-center w-full 2xl:mb-6 2xl:mb-0">
+
+                    <img class="h-10 w-10 mr-4" src="images/PDFicon.png" alt="">
+                    <h3 class="font-heading font-medium">Dr. Ainsley uploaded PDF file - (4/12/23)</h3>
+                  </div>
+                </div>
+                  <!-- Activity 4-->
+                <div class="flex flex-wrap pb-1 mb-6 border-b border-gray-100">
+                  <div class="flex flex-wrap items-center w-full 2xl:mb-6 2xl:mb-0">
+
+                    <img class="h-10 w-10 mr-4" src="images/Mask-group.png" alt="">
+                    <h3 class="font-heading font-medium">You gave upload access to Dr. Ainsely - (4/10/22)</h3>
+                  </div>
+                </div>
+                  <!-- Activity 5-->
+                <div class="flex flex-wrap pb-1 mb-6 border-b border-gray-100">
+                  <div class="flex flex-wrap items-center w-full 2xl:mb-6 2xl:mb-0">
+
+                    <img class="h-10 w-10 mr-4" src="images/PDFicon.png" alt="">
+                    <h3 class="font-heading font-medium">Dr. Faustina uploaded PDF file(12/13/22)</h3>
+                  </div>
+                </div>
+                  <!-- Activity 6-->
+                <div class="flex flex-wrap pb-1 mb-6 border-b border-gray-100">
+                  <div class="flex flex-wrap items-center w-full 2xl:mb-6 2xl:mb-0">
+
+                    <img class="h-10 w-10 mr-4" src="images/Mask-group.png" alt="">
+                    <h3 class="font-heading font-medium">You gave upload access to Dr. Faustina - (12/13/22)</h3>
+                  </div>
+                </div>
+                  <!-- Activity 7-->
+                <div class="flex flex-wrap pb-1 mb-6 border-b border-gray-100">
+                  <div class="flex flex-wrap items-center w-full 2xl:mb-6 2xl:mb-0">
+
+                    <img class="h-10 w-10 mr-4" src="images/Mask-group.png" alt="">
+                    <h3 class="font-heading font-medium">You gave read access to Dr. Faustina - (12/13/22)</h3>
+                  </div>
+                </div>
+
+                <a class="flex items-center pb-1 text-xl text-green-600 hover:text-green-700 font-bold tracking-tight max-w-max mx-auto border-b border-green-600 hover:border-green-700" href="#">
+                  <span class="mr-5">More</span>
+                  <svg width="13" height="17" viewbox="0 0 13 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 11.3L6 15.5L6 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M1 11.5L6 15.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="js/charts-demo.js"></script>
+</body>
+</html>
+
