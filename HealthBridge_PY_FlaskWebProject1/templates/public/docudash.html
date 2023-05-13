@@ -59,21 +59,23 @@
           </nav>
         </div>
       </section>
-
+<!--Table Top----------------------------------------------------------------->
       <section class="py-0 bg-blueGray-50">
         <div class="container px-4 mx-auto">
           <div class="flex flex-wrap -mx-4">
-            <div class="w-full lg:w-2/3 p-4">
+
+            <div class="w-full lg:p-4">
               <div class="p-7 pt-4 pb-12 2xl:h-full bg-white rounded-5xl">
                 <div class="flex flex-wrap px-9 mb-8">
                   <div class="w-full md:w-1/2 mb-6 md:mb-0">
                     <h2 class="mb-3 text-3xl font-heading font-medium">Your Documents</h2>
                     <p class="text-darkBlueGray-400 font-heading font-normal">Lorem Ipsum</p>
                   </div>
-                  <div class="w-full md:w-1/2 max-w-max md:ml-auto"><a class="block py-4 px-7 w-full leading-3 text-white font-semibold tracking-tighter font-heading text-center bg-blue-500 hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 rounded-xl" href="#">Share</a></div>
+                  <div class="w-full md:w-1/2 max-w-max md:ml-auto"><a class="block py-4 px-7 w-full leading-3 text-white font-semibold tracking-tighter font-heading text-center bg-blue-500 hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 rounded-xl" href="#">Upload New</a></div>
                 </div>
+  <!--Table headers-->
                 <div class="px-9 mb-4">
-                  <div class="border-b border-gray-100"><a class="inline-block py-4 pr-16 mr-9 text-blue-500 hover:text-blue-600 font-heading font-medium border-0 border-b-2 border-blue-500" href="#">Upload</a><a class="inline-block py-4 pr-16 mr-9 text-gray-300 hover:text-gray-400 font-heading font-medium" href="#">Read</a></div>
+                  <div class="border-b border-gray-100"><a class="inline-block py-4 pr-16 mr-9 text-blue-500 hover:text-blue-600 font-heading font-medium border-0 border-b-2 border-blue-500" href="#">Uploaded by You</a><a class="inline-block py-4 pr-16 mr-9 text-gray-300 hover:text-gray-400 font-heading font-medium" href="#">Uploaded by Others</a></div>
                 </div>
                 <div class="overflow-x-auto">
                   <div class="inline-block min-w-full overflow-hidden">
@@ -82,141 +84,149 @@
                         <tr>
                           <th class="flex items-center pl-9 h-24 bg-white text-left">
                             <input class="appearance-none w-6 h-6 mr-9 bg-white border-2 border-darkbluegray-50 rounded-md" type="checkbox">
-                            <span class="text-sm text-body text-opacity-40 font-heading font-semibold uppercase">User id</span>
+                            <span class="text-sm text-body text-opacity-40 font-heading font-semibold uppercase">Documents</span>
                           </th>
                           <th class="p-5 h-24 text-left bg-white">
-                            <span class="text-sm text-body text-opacity-40 font-heading font-semibold uppercase">Provider</span>
+                            <span class="text-sm text-body text-opacity-40 font-heading font-semibold uppercase">Uploaded By</span>
                           </th>
                           <th class="p-5 h-24 bg-white text-left">
-                            <span class="text-sm text-body text-opacity-40 font-heading font-semibold uppercase">Status</span>
+                            <span class="text-sm text-body text-opacity-40 font-heading font-semibold uppercase">Date</span>
                           </th>
                         </tr>
                       </thead>
                       <tbody>
+                      <!--List Item 1-->
+                      <tr>
+                          <td class="p-0">
+                            <div class="flex items-center pl-9 p-5 h-20 bg-blueGray-50 min-w-max border-l border-t border-b border-gray-100 rounded-tl-5xl rounded-bl-5xl">
+                              <input class="appearance-none w-6 h-6 mr-9 bg-white border-2 border-darkbluegray-50 rounded-md" type="checkbox">
+                              <div class="flex items-center justify-start">
+                                <img class="h-10 w-10 mr-4" src="images/dicomicon.png" alt="">
+                                <div>
+                                  <div class="font-heading font-medium">Brain MRI</div>
+                                  <div class="text-sm text-darkBlueGray-400 font-heading">DICOM File</div>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="p-0">
+                            <div class="flex flex-col items-start justify-center p-5 h-20 text-center min-w-max bg-blueGray-50 border-t border-b border-gray-100">
+                              <span class="font-heading font-medium">You</span>
+                              <span class="text-sm text-darkBlueGray-400 font-heading">User Uploaded</span>
+                            </div>
+                          </td>
+                          <td class="p-0">
+                            <div class="flex flex-col items-start justify-center p-5 h-20 text-center min-w-max bg-blueGray-50 border-t border-b border-gray-100">
+                              <span class="font-heading font-medium">4/25/2023</span>
+                              <span class="text-sm text-darkBlueGray-400 font-heading">9:15 AM EST</span>
+                            </div>
+                          </td>
+                        </tr>
+                      <!--List Item 2-->
                         <tr>
                           <td class="p-0">
                             <div class="flex items-center pl-9 p-5 h-20 bg-blueGray-50 min-w-max border-l border-t border-b border-gray-100 rounded-tl-5xl rounded-bl-5xl">
                               <input class="appearance-none w-6 h-6 mr-9 bg-white border-2 border-darkbluegray-50 rounded-md" type="checkbox">
                               <div class="flex items-center justify-start">
-                                <img class="mr-5" src="uinel-assets/images/dashboard-tables/av1.png" alt="">
+                                <img class="h-10 w-10 mr-4" src="images/dicomicon.png" alt="">
                                 <div>
-                                  <div class="font-heading font-medium">Reta Havertz, RN</div>
-                                  <div class="text-sm text-darkBlueGray-400 font-heading">reta@nch.org</div>
+                                  <div class="font-heading font-medium">Brain MRI</div>
+                                  <div class="text-sm text-darkBlueGray-400 font-heading">DICOM File</div>
                                 </div>
                               </div>
                             </div>
                           </td>
                           <td class="p-0">
                             <div class="flex flex-col items-start justify-center p-5 h-20 text-center min-w-max bg-blueGray-50 border-t border-b border-gray-100">
-                              <span class="font-heading font-medium">NCH Healthcare</span>
-                              <span class="text-sm text-darkBlueGray-400 font-heading">Radiology</span>
+                              <span class="font-heading font-medium">You</span>
+                              <span class="text-sm text-darkBlueGray-400 font-heading">User Uploaded</span>
                             </div>
                           </td>
                           <td class="p-0">
                             <div class="flex flex-col items-start justify-center p-5 h-20 text-center min-w-max bg-blueGray-50 border-t border-b border-gray-100">
-                              <span class="font-heading font-medium">Active</span>
-                              <span class="text-sm text-darkBlueGray-400 font-heading">15 Days Remaining</span>
+                              <span class="font-heading font-medium">4/25/2023</span>
+                              <span class="text-sm text-darkBlueGray-400 font-heading">9:15 AM EST</span>
                             </div>
                           </td>
                         </tr>
-                        <tr>
-                          <td class="p-0">
-                            <div class="flex items-center pl-9 p-5 h-20 bg-white min-w-max rounded-tl-5xl rounded-bl-5xl">
-                              <input class="appearance-none w-6 h-6 mr-9 bg-white border-2 border-darkbluegray-50 rounded-md" type="checkbox">
-                              <div class="flex items-center justify-start">
-                                <img class="mr-5" src="uinel-assets/images/dashboard-tables/av2.png" alt="">
-                                <div>
-                                  <div class="font-heading font-medium">Dr. Ainsley Stones</div>
-                                  <div class="text-sm text-darkBlueGray-400 font-heading">ainsley@Mayo.org</div>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                          <td class="p-0">
-                            <div class="flex flex-col items-start justify-center p-5 h-20 text-center min-w-max bg-white">
-                              <span class="font-heading font-medium">Mayo Clinic</span>
-                              <span class="text-sm text-darkBlueGray-400 font-heading">Oncology</span>
-                            </div>
-                          </td>
-                          <td class="p-0">
-                            <div class="flex flex-col items-start justify-center p-5 h-20 text-center min-w-max bg-white">
-                              <span class="font-heading font-medium">Active</span>
-                              <span class="text-sm text-darkBlueGray-400 font-heading">4 Days Remaining</span>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
+                      <!--List Item 3-->
+                       <tr>
                           <td class="p-0">
                             <div class="flex items-center pl-9 p-5 h-20 bg-blueGray-50 min-w-max border-l border-t border-b border-gray-100 rounded-tl-5xl rounded-bl-5xl">
                               <input class="appearance-none w-6 h-6 mr-9 bg-white border-2 border-darkbluegray-50 rounded-md" type="checkbox">
                               <div class="flex items-center justify-start">
-                                <img class="mr-5" src="uinel-assets/images/dashboard-tables/av3.png" alt="">
+                                <img class="h-10 w-10 mr-4" src="images/dicomicon.png" alt="">
                                 <div>
-                                  <div class="font-heading font-medium">Dr. Faustina H. Fawn</div>
-                                  <div class="text-sm text-darkBlueGray-400 font-heading">fhf@NYHC.org</div>
+                                  <div class="font-heading font-medium">Brain MRI</div>
+                                  <div class="text-sm text-darkBlueGray-400 font-heading">DICOM File</div>
                                 </div>
                               </div>
                             </div>
                           </td>
                           <td class="p-0">
                             <div class="flex flex-col items-start justify-center p-5 h-20 text-center min-w-max bg-blueGray-50 border-t border-b border-gray-100">
-                              <span class="font-heading font-medium">NYU Medical System</span>
-                              <span class="text-sm text-darkBlueGray-400 font-heading">Radiology</span>
+                              <span class="font-heading font-medium">You</span>
+                              <span class="text-sm text-darkBlueGray-400 font-heading">User Uploaded</span>
                             </div>
                           </td>
                           <td class="p-0">
                             <div class="flex flex-col items-start justify-center p-5 h-20 text-center min-w-max bg-blueGray-50 border-t border-b border-gray-100">
-                              <span class="font-heading font-medium text-gray">Inactive</span>
+                              <span class="font-heading font-medium">4/25/2023</span>
+                              <span class="text-sm text-darkBlueGray-400 font-heading">9:15 AM EST</span>
                             </div>
                           </td>
                         </tr>
-                        <tr>
-                          <td class="p-0">
-                            <div class="flex items-center pl-9 p-5 h-20 bg-white min-w-max rounded-tl-5xl rounded-bl-5xl">
-                              <input class="appearance-none w-6 h-6 mr-9 bg-white border-2 border-darkbluegray-50 rounded-md" type="checkbox">
-                              <div class="flex items-center justify-start">
-                                <img class="mr-5" src="uinel-assets/images/dashboard-tables/av1.png" alt="">
-                                <div>
-                                  <div class="font-heading font-medium">Kara Saamers, PA</div>
-                                  <div class="text-sm text-darkBlueGray-400 font-heading">kar@MRI.Org</div>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                          <td class="p-0">
-                            <div class="flex flex-col items-start justify-center p-5 h-20 text-center min-w-max bg-white">
-                              <span class="font-heading font-medium">Orthipedic Solutions</span>
-                              <span class="text-sm text-darkBlueGray-400 font-heading">Radiology</span>
-                            </div>
-                          </td>
-                          <td class="p-0">
-                             <div class="flex flex-col items-start justify-center p-5 h-20 text-center min-w-max bg-blueGray-50 border-t border-b border-gray-100">
-                              <span class="font-heading font-medium text-gray">Inactive</span>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
+                      <!--List Item 4-->
+                    <tr>
                           <td class="p-0">
                             <div class="flex items-center pl-9 p-5 h-20 bg-blueGray-50 min-w-max border-l border-t border-b border-gray-100 rounded-tl-5xl rounded-bl-5xl">
                               <input class="appearance-none w-6 h-6 mr-9 bg-white border-2 border-darkbluegray-50 rounded-md" type="checkbox">
                               <div class="flex items-center justify-start">
-                                <img class="mr-5" src="uinel-assets/images/dashboard-tables/av2.png" alt="">
+                                <img class="h-10 w-10 mr-4" src="images/dicomicon.png" alt="">
                                 <div>
-                                  <div class="font-heading font-medium">Teresa Olivia Mader, Medtech</div>
-                                  <div class="text-sm text-darkBlueGray-400 font-heading">ainsley@catscan.org</div>
+                                  <div class="font-heading font-medium">Brain MRI</div>
+                                  <div class="text-sm text-darkBlueGray-400 font-heading">DICOM File</div>
                                 </div>
                               </div>
                             </div>
                           </td>
                           <td class="p-0">
                             <div class="flex flex-col items-start justify-center p-5 h-20 text-center min-w-max bg-blueGray-50 border-t border-b border-gray-100">
-                              <span class="font-heading font-medium">Complete Medical Team</span>
-                              <span class="text-sm text-darkBlueGray-400 font-heading">Radiology</span>
+                              <span class="font-heading font-medium">You</span>
+                              <span class="text-sm text-darkBlueGray-400 font-heading">User Uploaded</span>
                             </div>
                           </td>
                           <td class="p-0">
-                             <div class="flex flex-col items-start justify-center p-5 h-20 text-center min-w-max bg-blueGray-50 border-t border-b border-gray-100">
-                              <span class="font-heading font-medium text-gray">Inactive</span>
+                            <div class="flex flex-col items-start justify-center p-5 h-20 text-center min-w-max bg-blueGray-50 border-t border-b border-gray-100">
+                              <span class="font-heading font-medium">4/25/2023</span>
+                              <span class="text-sm text-darkBlueGray-400 font-heading">9:15 AM EST</span>
+                            </div>
+                          </td>
+                        </tr>
+                      <!--List Item 5-->
+                   <tr>
+                          <td class="p-0">
+                            <div class="flex items-center pl-9 p-5 h-20 bg-blueGray-50 min-w-max border-l border-t border-b border-gray-100 rounded-tl-5xl rounded-bl-5xl">
+                              <input class="appearance-none w-6 h-6 mr-9 bg-white border-2 border-darkbluegray-50 rounded-md" type="checkbox">
+                              <div class="flex items-center justify-start">
+                                <img class="h-10 w-10 mr-4" src="images/dicomicon.png" alt="">
+                                <div>
+                                  <div class="font-heading font-medium">Brain MRI</div>
+                                  <div class="text-sm text-darkBlueGray-400 font-heading">DICOM File</div>
+                                </div>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="p-0">
+                            <div class="flex flex-col items-start justify-center p-5 h-20 text-center min-w-max bg-blueGray-50 border-t border-b border-gray-100">
+                              <span class="font-heading font-medium">You</span>
+                              <span class="text-sm text-darkBlueGray-400 font-heading">User Uploaded</span>
+                            </div>
+                          </td>
+                          <td class="p-0">
+                            <div class="flex flex-col items-start justify-center p-5 h-20 text-center min-w-max bg-blueGray-50 border-t border-b border-gray-100">
+                              <span class="font-heading font-medium">4/25/2023</span>
+                              <span class="text-sm text-darkBlueGray-400 font-heading">9:15 AM EST</span>
                             </div>
                           </td>
                         </tr>
@@ -228,70 +238,8 @@
               </div>
             </div>
   <!-------------------------Dashboard Right Column---------------------------------------------------------------------------------------------------------------------->
-            <div class="w-full lg:w-1/3 p-4">
-              <div class="p-10 xl:py-4 xl:px-6 2xl:h-full bg-white rounded-5xl">
-                <h3 class="mb-3 text-3xl font-heading font-medium">Recent Activity</h3>
-                <p class="mb-12 text-darkBlueGray-400">New files and access</p>
 
-                <!-- Activity 1 -->
-                <div class="flex flex-wrap pb-1 mb-6 border-b border-gray-100">
-                  <div class="flex flex-wrap items-center w-full 2xl:mb-6 2xl:mb-0">
-
-                    <img class="h-10 w-10 mr-4" src="images/dicomicon.png" alt="">
-                    <h3 class="font-heading font-medium">Reta uploaded DICOM file - (4/25/23)</h3>
-                  </div>
-                </div>
-                <!-- Activity 2-->
-                <div class="flex flex-wrap pb-1 mb-6 border-b border-gray-100">
-                  <div class="flex flex-wrap items-center w-full 2xl:mb-6 2xl:mb-0">
-
-                    <img class="h-10 w-10 mr-4" src="images/Mask-group.png" alt="">
-                    <h3 class="font-heading font-medium">You gave uploaded access to Reta - (4/20/22)</h3>
-                  </div>
-                </div>
-                <!-- Activity 3-->
-                <div class="flex flex-wrap pb-1 mb-6 border-b border-gray-100">
-                  <div class="flex flex-wrap items-center w-full 2xl:mb-6 2xl:mb-0">
-
-                    <img class="h-10 w-10 mr-4" src="images/PDFicon.png" alt="">
-                    <h3 class="font-heading font-medium">Dr. Ainsley uploaded PDF file - (4/12/23)</h3>
-                  </div>
-                </div>
-                  <!-- Activity 4-->
-                <div class="flex flex-wrap pb-1 mb-6 border-b border-gray-100">
-                  <div class="flex flex-wrap items-center w-full 2xl:mb-6 2xl:mb-0">
-
-                    <img class="h-10 w-10 mr-4" src="images/Mask-group.png" alt="">
-                    <h3 class="font-heading font-medium">You gave upload access to Dr. Ainsely - (4/10/22)</h3>
-                  </div>
-                </div>
-                  <!-- Activity 5-->
-                <div class="flex flex-wrap pb-1 mb-6 border-b border-gray-100">
-                  <div class="flex flex-wrap items-center w-full 2xl:mb-6 2xl:mb-0">
-
-                    <img class="h-10 w-10 mr-4" src="images/PDFicon.png" alt="">
-                    <h3 class="font-heading font-medium">Dr. Faustina uploaded PDF file(12/13/22)</h3>
-                  </div>
-                </div>
-                  <!-- Activity 6-->
-                <div class="flex flex-wrap pb-1 mb-6 border-b border-gray-100">
-                  <div class="flex flex-wrap items-center w-full 2xl:mb-6 2xl:mb-0">
-
-                    <img class="h-10 w-10 mr-4" src="images/Mask-group.png" alt="">
-                    <h3 class="font-heading font-medium">You gave upload access to Dr. Faustina - (12/13/22)</h3>
-                  </div>
-                </div>
-                  <!-- Activity 7-->
-                <div class="flex flex-wrap pb-1 mb-6 border-b border-gray-100">
-                  <div class="flex flex-wrap items-center w-full 2xl:mb-6 2xl:mb-0">
-
-                    <img class="h-10 w-10 mr-4" src="images/Mask-group.png" alt="">
-                    <h3 class="font-heading font-medium">You gave read access to Dr. Faustina - (12/13/22)</h3>
-                  </div>
-                </div>
-
-                <a class="flex items-center pb-1 text-xl text-green-600 hover:text-green-700 font-bold tracking-tight max-w-max mx-auto border-b border-green-600 hover:border-green-700" href="#">
-                  <span class="mr-5">More</span>
+                            <a class="flex items-center pb-1 text-xl text-green-600 hover:text-green-700 font-bold tracking-tight max-w-max mx-auto border-b border-green-600 hover:border-green-700" href="#">
                   <svg width="13" height="17" viewbox="0 0 13 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 11.3L6 15.5L6 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                     <path d="M1 11.5L6 15.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
