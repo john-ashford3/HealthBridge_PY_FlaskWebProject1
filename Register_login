@@ -1,37 +1,30 @@
-# Import necessary modules
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required
-from flask_otp import OTP #, OTPSecret
+from flask_otp import OTP, OTPSecret
 from azure.identity import DefaultAzureCredential
 from azure.keyvault.secrets import SecretClient
 from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient
 import uuid
 
-# Initialize the Flask application
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your_secret_key_here'
 app.config['OTP_SECRETS'] = {}
 
-# Initialize the Flask-Login extension
 login_manager = LoginManager()
 login_manager.init_app(app)
-
-# Initialize the Flask-OTP extension
 otp = OTP(app)
-# secrets = OTPSecret(app)
+secrets = OTPSecret(app)
 
 # Get the Azure Blob Storage connection string from the Azure Key Vault
 credential = DefaultAzureCredential()
-# secret_client = SecretClient(vault_url="https://your-key-vault-name.vault.azure.net/", credential=credential)
-# connection_string = secret_client.get_secret(name="blob-connection-string").value
-conn_string='DefaultEndpointsProtocol=https;AccountName=medvaultconnect;AccountKey=gkyz7TxUz6RPgqOTf0e6YovEGRjpukpSObey0D1uKRbvvAsusqVUIh9JJuEp8wTgIOPgUo7SxNuR+AStx3KbSA==;EndpointSuffix=core.windows.net'
+secret_client = SecretClient(vault_url="https://your-key-vault-name.vault.azure.net/", credential=credential)
+connection_string = secret_client.get_secret(name="blob-connection-string").value
 
 # Initialize the Azure Blob Storage client
-blob_service_client = BlobServiceClient.from_connection_string(conn_string)
-
+blob_service_client = BlobServiceClient.from_connection_string(connection_string)
 
 # Get the Azure Blob Storage container client
-container_name = "medvaultconnect"
+container_name = "your-container-name"
 container_client = blob_service_client.get_container_client(container_name)
 
 # User model
@@ -79,8 +72,8 @@ def signup():
             # Redirect to the two-factor authentication page
             login_user(user, remember=True)
             return redirect(url_for('verify'))
-        except Exception as e:
-            flash(f'Error: Could not create user account. reason is {e}')
+        except:
+            flash('Error: Could not create user account.')
             return redirect(url_for('signup'))
     else:
         return render_template('signup.html')
@@ -109,6 +102,4 @@ def logout():
     logout_user()
     return redirect(url_for('index'))
 
-if __name__ == '__main__':
-    app.run(debug=True)
-
+if __name__ == '__
