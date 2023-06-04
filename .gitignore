@@ -3,6 +3,15 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# dependencies
+/node_modules
+
+# build output
+/build
+
+# dotenv environment variables file
+.env
+
 # User-specific files
 *.rsuser
 *.suo
