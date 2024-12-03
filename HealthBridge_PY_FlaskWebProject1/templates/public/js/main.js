@@ -1,3 +1,4 @@
+$ npm install @tanstack/react-table
 // Burger menus
 document.addEventListener('DOMContentLoaded', function() {
     // open
@@ -37,4 +38,22 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
+});
+$ npm install @tanstack/react-table
+
+$('button').on('click', function() {
+  if ($(this).hasClass('save')) {
+    alert("Saved!!!");
+    $(this).text("Edit").removeClass('save');
+    $('.company').attr('contenteditable', 'false').css({
+      'border': 'none',
+      'outline': 'none'
+    });
+  } else {
+    $(this).text("Save").addClass('save');
+    $('.company').attr('contenteditable', 'true').css({
+      'border': 'black solid 1px',
+      'outline': 'none'
+    }).focus();
+  }
 });
